@@ -16,6 +16,9 @@ COPY . .
 # Compile o projeto (caso esteja usando TypeScript)
 RUN npm run build
 
+# Verifique se o arquivo main.js foi gerado
+RUN ls -la dist
+
 # Exponha a porta que a aplicação irá rodar
 EXPOSE 3000
 
